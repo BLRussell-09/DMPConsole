@@ -1,4 +1,4 @@
-from character import getCharacter
+import character
 from weapons import create_weapon
 from random_loot_event import random_loot, random_event
 
@@ -7,7 +7,7 @@ def get_home():
   if prompt == "1":
     create_weapon()
   elif prompt == "2":
-    getCharacter()
+    character.getCharacter()
   elif prompt == "3":
     random_loot()
   elif prompt == "4":
@@ -16,6 +16,6 @@ def get_home():
     get_home()
 
 def return_bar():
-  status = input("\nWould you like to continue? (y/n) \n>")
+  status = input("\nWould you like to return to the main menu? (y/n) \n>")
   if status == 'y' or status == 'Y':
     get_home()

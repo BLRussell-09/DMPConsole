@@ -1,8 +1,8 @@
 import pyrebase
 from home import get_home
-from config import config
+from authy import config
 
-firebase = pyrebase.initialize_app(config)
+firebase = pyrebase.initialize_app(config.config)
 auth = firebase.auth()
 
 def sign_in():
