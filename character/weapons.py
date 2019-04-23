@@ -1,6 +1,6 @@
 import json
 import requests
-import home
+from home import home
 import character
 weapon_url = 'https://dungeonmastersapi20190214061000.azurewebsites.net/api/weapons/add'
 
