@@ -1,7 +1,7 @@
 import json
 import requests
-import home
-from character import getUser
+from home import home
+import character
 weapon_url = 'https://dungeonmastersapi20190214061000.azurewebsites.net/api/weapons/add'
 
 def create_weapon():
@@ -31,6 +31,6 @@ def add_weapon(weapon):
   requests.post(weapon_url, json=weapon)
   owner_id = weapon["owner_id"]
   name = weapon["name"]
-  user_name = getUser(owner_id)
+  user_name = character.getUser(owner_id)
   print(f"\n{name} has been added to {user_name}'s inventory!")
   home.return_bar()

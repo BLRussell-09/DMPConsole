@@ -1,7 +1,6 @@
+from home import home
 import requests
 import json
-import home
-
 
 url = 'https://dungeonmastersapi20190214061000.azurewebsites.net/api/pc/'
 
@@ -22,9 +21,11 @@ def getCharacter():
   level = user["level"]
   name = user["name"]
   race = user["race"]["name"]
+  hp = user["hit_points"]
   print(f"\nName: {name}: {desc}\n")
   print(f"Race: {race}\n")
   print(f"Level: {level}\n")
+  print(f"Hit Points: {hp}\n")
   list_weapons(user["weapons"])
   list_skills(user["skills"])
   home.return_bar()
